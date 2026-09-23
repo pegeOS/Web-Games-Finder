@@ -1,8 +1,57 @@
+/* Importa a fonte (ou use <link> no <head> pra ser mais rápido) */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: #221;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-a {
-  color: #00B7FF;
+.retro-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  line-height: 2;
+  text-transform: uppercase;
+}
+
+.retro-menu ol {
+  list-style: decimal;
+  margin: 0;
+  padding: 0;
+}
+.retro-menu a {
+  text-decoration: none;
+  color: #fff090;
+}
+
+.retro-menu li {
+  color: #4FAF44;
+}
+
+.retro-menu .arrow {
+  position: relative;
+  display: block;
+  color: #F6EB14;
+}
+
+.retro-menu .arrow i {
+  display: none;
+}
+
+.retro-menu .arrow:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.retro-menu .arrow:hover i {
+  display: block;
+  position: absolute;
+  top: 0.50em;
+  left: -6em;
 }

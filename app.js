@@ -8,7 +8,7 @@ const client = new MongoClient(uri)
 var homeRouter = require('./routes/home')
 var userRouter = require('./routes/user')
 
-const port = 3000;
+const port = 5000;
 var app = express()
 
 app.set('views', path.join(__dirname, 'views'));
