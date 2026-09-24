@@ -6,7 +6,10 @@ const uri = process.env.URI
 const client = new MongoClient(uri)
 
 var homeRouter = require('./routes/home')
-var userRouter = require('./routes/user')
+var catalogoRouter = require('./routes/catalogo')
+var favoritosRouter = require('./routes/favoritos')
+var explorarRouter = require('./routes/explorar')
+var sobreRouter = require('./routes/sobre')
 
 const port = 5000;
 var app = express()
@@ -19,7 +22,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', homeRouter)
-app.use('/user', userRouter)
+app.use('/catalogo', catalogoRouter)
+app.use('/favoritos', favoritosRouter)
+app.use('/explorar', explorarRouter)
+app.use('/sobre', sobreRouter)
 
 app.use((req, res, next) => {
     next(createError(404));

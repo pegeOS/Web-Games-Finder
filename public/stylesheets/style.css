@@ -1,5 +1,5 @@
 /* Importa a fonte (ou use <link> no <head> pra ser mais rápido) */
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap");
 
 body {
   margin: 0;
@@ -25,6 +25,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .retro-menu a {
   text-decoration: none;
   color: #fff090;
@@ -54,4 +55,62 @@ body {
   position: absolute;
   top: 0.50em;
   left: -6em;
+}
+
+/* cards retro */
+
+/* container do card */
+.retro-card {
+  background-color: #f5f5dc;
+  border: none;
+
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+
+  overflow: hidden;
+}
+
+.retro-card img {
+  width: 100%;
+  height: 250px;
+  display: block;
+}
+
+/* título centralizado, maior  com a fonte pixelada */
+.retro-card .card-title {
+  font-family: 'Press Start 2P', cursive;
+  color: #221;
+  font-size: 1.2rem;    
+  text-align: center;   
+  line-height: 1.4;
+  margin-bottom: 1.2rem;
+}
+
+/* texto do card um pouco maior*/
+.retro-card .card-text {
+  font-family: 'VT323', monospace;
+  color: #2a2a2a;
+  font-size: 1.4rem;
+  line-height: 1.25;
+}
+
+/* botão mantido o estilo retro */
+.retro-card .btn-retro {
+  font-family: 'Press Start 2P';
+  font-size: 0.75rem;
+  background-color: #221;
+  color: #F6EB14;
+  border: 2px solid #000;
+  border-radius: 0;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+/* Efeito Hover do Botão */
+.retro-card .btn-retro:hover {
+  background-color: #F6EB14;
+  color: #221;
+  border-color: #221;
 }

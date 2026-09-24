@@ -1,27 +1,12 @@
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Meu Site</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- linkando ao css sem a pasta public pq ta dentro de um .use static no app.js -->
-  <link rel="stylesheet" href="/stylesheets/style.css">
-  <!-- Font Awesome (pro ícone da seta) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
+<%- include('partials/header') %>
 
-
-
-<!-- Menu Retro (escopado) -->
 <div class="retro-menu">
   <ol>
-    <li><a class="arrow"><i class="fas fa-arrow-alt-right"></i>Catálogo</a></li>
-    <li><a class="arrow"><i class="fas fa-arrow-alt-right"></i>Favoritos</a></li>
-    <li><a class="arrow"><i class="fas fa-arrow-alt-right"></i>Explorar</a></li>
-    <li><a class="arrow"><i class="fas fa-arrow-alt-right"></i>Sobre Mim</a></li>
+    <li><a href="/catalogo" class="arrow"><i class="fas fa-arrow-alt-right"></i>Catálogo</a></li>
+    <li><a href="/favoritos" class="arrow"><i class="fas fa-arrow-alt-right"></i>Favoritos</a></li>
+    <li><a href="/explorar" class="arrow"><i class="fas fa-arrow-alt-right"></i>Explorar</a></li>
+    <li><a href="/sobremim" class="arrow"><i class="fas fa-arrow-alt-right"></i>Sobre Mim</a></li>
   </ol>
 </div>
 
