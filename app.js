@@ -1,6 +1,7 @@
 const express = require('express')
 const { MongoClient } = require('mongodb')
 const path = require('path')
+const createError = require('http-errors')
 require('dotenv').config()
 const uri = process.env.URI
 const client = new MongoClient(uri)
@@ -31,18 +32,16 @@ app.use((req, res, next) => {
     next(createError(404));
 });
 
-/*
-app.use((err, req, res, next) => {
-    res.locals.message = err.message;
-    res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-    res.status(err.status || 500);
-    res.render('error');
-});
-*/
-
-app.listen(port, () => {
-    console.log("Servidor rodando...")
-})
+client.connect()
+    .then(() => {
+        app.locals.db = client.db()
+        app.listen(port,() => {
+            console.log(`Servidor rodando em http://localhost:${port}`)
+        })
+    })
+    .catch(err => {
+        console.error('Erro ao conectar ao MongoDB:', err.message)
+        process.exit(1)
+    })
 
 module.exports = app;

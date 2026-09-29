@@ -1,11 +1,15 @@
 <%- include('partials/header') %>
 
-<h1 class="retro-title">Mais acessados</h1>
+<h1 class="retro-title"><%= categoria.nome %></h1>
 
 <div class="container mt-5">
   <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center">
 
-    <% top.forEach(jogo => { %>
+    <% if (jogos.length === 0) { %>
+    <p class="card-text text-center" style="color:#fff090;">Ainda não há jogos nesta categoria.</p>
+    <% } %>
+
+    <% jogos.forEach(jogo => { %>
     <div class="col">
       <div class="card retro-card">
         <a href="<%= jogo.url %>"><img src="<%= jogo.img %>"></a>

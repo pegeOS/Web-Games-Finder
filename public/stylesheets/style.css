@@ -134,6 +134,7 @@ body {
 }
 
 /* botão mantido o estilo retro */
+.btn-retro,
 .retro-card .btn-retro {
   font-family: 'Press Start 2P';
   font-size: 0.75rem;
@@ -148,6 +149,7 @@ body {
 }
 
 /* Efeito Hover do Botão */
+.btn-retro:hover,
 .retro-card .btn-retro:hover {
   background-color: #F6EB14;
   color: #221;

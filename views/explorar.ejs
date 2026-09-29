@@ -1,1 +1,15 @@
 <%- include('partials/header') %>
+
+<h1 class="retro-title">Explorar</h1>
+
+<div class="container mt-5">
+  <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+
+    <% categorias.forEach(cat => { %>
+    <div class="col">
+      <a href="/explorar/<%= cat.slug %>" class="btn-retro d-block text-center" style="padding: 18px 12px; font-size: 0.9rem;"><%= cat.nome %></a>
+    </div>
+    <% }) %>
+
+  </div>
+</div>
